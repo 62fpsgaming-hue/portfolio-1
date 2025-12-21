@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neeraj Saini | Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Meow+Script&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --primary-color: #000;
+      --secondary-color: #fff;
+      --accent-color: darkgoldenrod;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--primary-color);
+      color: var(--secondary-color);
+      line-height: 1.6;
+    }
+
+    header {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 20px 5%;
+      background: rgba(0, 0, 0, 0.9);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: var(--secondary-color);
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: var(--accent-color);
+    }
+
+    main {
+      padding: 0 5%;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    .hero-title {
+      font-size: clamp(3rem, 8vw, 6rem);
+      margin: 0;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .hero-subtitle {
+      font-family: "Meow Script", cursive;
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--accent-color);
+      margin: 10px 0 20px;
+    }
+
+    .hero-description {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .social-links {
+      margin-top: 30px;
+    }
+
+    .social-links a {
+      color: var(--secondary-color);
+      font-size: 2rem;
+      margin: 0 15px;
+      transition: color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      color: var(--accent-color);
+    }
+
+    /* Projects Section */
+    .section {
+      padding: 80px 5%;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 5vw, 3rem);
+      text-align: center;
+      margin-bottom: 50px;
+      text-transform: uppercase;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      width: 80px;
+      height: 4px;
+      background: var(--accent-color);
+      display: block;
+      margin: 10px auto 0;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .project-card {
+      background: #111;
+      border: 1px solid #333;
+      padding: 25px;
+      border-radius: 8px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .project-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: var(--accent-color);
+    }
+
+    .project-card p {
+      color: #ccc;
+    }
+
+    /* Contact Section */
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+      display: grid;
+      gap: 20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 15px;
+      background: #111;
+      border: 1px solid #333;
+      border-radius: 5px;
+      color: var(--secondary-color);
+    }
+
+    .contact-form button {
+      padding: 15px 30px;
+      background: var(--accent-color);
+      border: none;
+      color: var(--primary-color);
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      border-radius: 5px;
+    }
+
+    .contact-form button:hover {
+      background: #c08000;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      border-top: 1px solid #333;
+      margin-top: 50px;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        justify-content: center;
+      }
+      
+      nav a {
+        margin: 0 10px;
+      }
+
+      .section {
+        padding: 60px 5%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="#hero" class="active">Home</a>
+      <a href="#about">About Me</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a href="skill.html">Skills</a>
+      
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <h1 class="hero-title">PORTFOLIO</h1>
+      <h2 class="hero-subtitle">Creative</h2>
+      <p class="hero-description">Hello, I'm Neeraj Saini, a software developer skilled in building web applications.</p>
+      <div class="social-links">
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#"><i class="fa-brands fa-github"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+    </section>
+
+    <hr>
+    <section id="about" class="section">
+      <div class="project-card">
+      <h2 class="section-title">About Me</h2>
+      <img src="download.jpeg" alt="profile image" width="250px" height="250px">
+      <p style="max-width: 800px; margin: 0 auto; text-align: center;">
+        I am a passionate and dedicated software developer with a strong foundation in web technologies. My journey in development began with a curiosity for how things work, which has since grown into a professional pursuit of creating efficient and user-friendly applications. I specialize in building robust and scalable web solutions, and I am always eager to learn and adapt to new challenges.
+      </p></div>
+    </section>
+
+    <hr>
+    <section id="projects" class="section">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects-grid">
+        <div class="project-card">
+            <h3>Responsive Portfolio Website</h3>
+            <img src="website-template.jpg" alt="A screenshot of a portfolio website template, showing a clean, modern layout with sections for skills and projects." width="500px" height="500px">
+            <p>
+                This project is a fully responsive, single-page static website created from scratch using HTML5 and CSS3. It's designed to serve as a professional online portfolio, effectively showcasing my <strong>technical skills</strong> ,<strong>personal projects</strong>, and <strong>professional experience</strong>. The site features a clean and modern design, with dedicated sections for an "About Me" introduction, a gallery of my best work, and a contact form. 
+                <br>
+        </div>
+    </div>
+</section>
+
+    <hr>
+   <!-- <section id="contact" class="section">
+      <h2 class="section-title">Contact</h2>
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>-->
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Neeraj Saini. All Rights Reserved.</p>
+  </footer>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
+
