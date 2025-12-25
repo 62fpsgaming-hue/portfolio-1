@@ -3,287 +3,171 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Neeraj Saini | Portfolio</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Meow+Script&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-
-  <style>
-    :root {
-      --primary-color: #000;
-      --secondary-color: #fff;
-      --accent-color: darkgoldenrod;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: var(--primary-color);
-      color: var(--secondary-color);
-      line-height: 1.6;
-    }
-
-    header {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      padding: 20px 5%;
-      background: rgba(0, 0, 0, 0.9);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    nav a {
-      color: var(--secondary-color);
-      text-decoration: none;
-      margin-left: 20px;
-      font-size: 1rem;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover,
-    nav a.active {
-      color: var(--accent-color);
-    }
-
-    main {
-      padding: 0 5%;
-    }
-
-    /* Hero Section */
-    .hero {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      text-align: center;
-    }
-
-    .hero-title {
-      font-size: clamp(3rem, 8vw, 6rem);
-      margin: 0;
-      line-height: 1;
-      text-transform: uppercase;
-    }
-
-    .hero-subtitle {
-      font-family: "Meow Script", cursive;
-      font-size: clamp(2rem, 4vw, 3rem);
-      color: var(--accent-color);
-      margin: 10px 0 20px;
-    }
-
-    .hero-description {
-      font-size: clamp(1rem, 2vw, 1.25rem);
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    
-    .social-links {
-      margin-top: 30px;
-    }
-
-    .social-links a {
-      color: var(--secondary-color);
-      font-size: 2rem;
-      margin: 0 15px;
-      transition: color 0.3s ease;
-    }
-
-    .social-links a:hover {
-      color: var(--accent-color);
-    }
-
-    /* Projects Section */
-    .section {
-      padding: 80px 5%;
-    }
-
-    .section-title {
-      font-size: clamp(2rem, 5vw, 3rem);
-      text-align: center;
-      margin-bottom: 50px;
-      text-transform: uppercase;
-      position: relative;
-    }
-
-    .section-title::after {
-      content: '';
-      width: 80px;
-      height: 4px;
-      background: var(--accent-color);
-      display: block;
-      margin: 10px auto 0;
-    }
-
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-    }
-
-    .project-card {
-      background: #111;
-      border: 1px solid #333;
-      padding: 25px;
-      border-radius: 8px;
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .project-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-    }
-
-    .project-card h3 {
-      font-size: 1.5rem;
-      margin-bottom: 10px;
-      color: var(--accent-color);
-    }
-
-    .project-card p {
-      color: #ccc;
-    }
-
-    /* Contact Section */
-    .contact-form {
-      max-width: 600px;
-      margin: 0 auto;
-      display: grid;
-      gap: 20px;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: 15px;
-      background: #111;
-      border: 1px solid #333;
-      border-radius: 5px;
-      color: var(--secondary-color);
-    }
-
-    .contact-form button {
-      padding: 15px 30px;
-      background: var(--accent-color);
-      border: none;
-      color: var(--primary-color);
-      font-weight: 600;
-      cursor: pointer;
-      transition: background 0.3s ease;
-      border-radius: 5px;
-    }
-
-    .contact-form button:hover {
-      background: #c08000;
-    }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 20px;
-      border-top: 1px solid #333;
-      margin-top: 50px;
-      font-size: 0.9rem;
-      color: #aaa;
-    }
-
-    @media (max-width: 768px) {
-      header {
-        justify-content: center;
-      }
-      
-      nav a {
-        margin: 0 10px;
-      }
-
-      .section {
-        padding: 60px 5%;
-      }
-    }
-  </style>
+  <title>Neeraj Saini | Frontend & AI/ML Developer</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <header>
-    <nav>
-      <a href="#hero" class="active">Home</a>
-      <a href="#about">About Me</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-      <a href="skill.html">Skills</a>
-      
-    </nav>
-  </header>
+<header>
+  <div class="logo">
+    <h1>Neeraj Saini.</h1>
+  </div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a href="https://www.linkedin.com/in/neeraj-saini-464318232/"><button class="btn btn-touch">Hire Me</button></a>
+</header>
 
-  <main>
-    <section id="hero" class="hero">
-      <h1 class="hero-title">PORTFOLIO</h1>
-      <h2 class="hero-subtitle">Creative</h2>
-      <p class="hero-description">Hello, I'm Neeraj Saini, a software developer skilled in building web applications.</p>
-      <div class="social-links">
-        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-        <a href="#"><i class="fa-brands fa-github"></i></a>
-        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+<main class="container">
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Hi, I'm <span>Neeraj Saini</span><br />Frontend & AI/ML Dev.</h1>
+      <p>I create high-impact, functional web applications with modern technologies. Specialized in building clean UI and data-driven solutions.</p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-work">View My Work →</a>
+        <a href="#contact" class="btn btn-secondary">Get in Touch</a>
       </div>
-    </section>
-
-    <hr>
-    <section id="about" class="section">
-      <div class="project-card">
-      <h2 class="section-title">About Me</h2>
-      <img src="download.jpeg" alt="profile image" width="250px" height="250px">
-      <p style="max-width: 800px; margin: 0 auto; text-align: center;">
-        I am a passionate and dedicated software developer with a strong foundation in web technologies. My journey in development began with a curiosity for how things work, which has since grown into a professional pursuit of creating efficient and user-friendly applications. I specialize in building robust and scalable web solutions, and I am always eager to learn and adapt to new challenges.
-      </p></div>
-    </section>
-
-    <hr>
-    <section id="projects" class="section">
-    <h2 class="section-title">Projects</h2>
-    <div class="projects-grid">
-        <div class="project-card">
-            <h3>Responsive Portfolio Website</h3>
-            <img src="website-template.jpg" alt="A screenshot of a portfolio website template, showing a clean, modern layout with sections for skills and projects." width="500px" height="500px">
-            <p>
-                This project is a fully responsive, single-page static website created from scratch using HTML5 and CSS3. It's designed to serve as a professional online portfolio, effectively showcasing my <strong>technical skills</strong> ,<strong>personal projects</strong>, and <strong>professional experience</strong>. The site features a clean and modern design, with dedicated sections for an "About Me" introduction, a gallery of my best work, and a contact form. 
-                <br>
-        </div>
     </div>
-</section>
+    <div class="hero-img">
+      <img src="image.png" alt="Developer Illustration" />
+    </div>
+  </section>
 
-    <hr>
-   <!-- <section id="contact" class="section">
-      <h2 class="section-title">Contact</h2>
-      <form class="contact-form">
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </section>-->
-  </main>
+  <section class="features-grid">
+    <div class="feature-card">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" stroke-linejoin="arcs"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+      <h3>Clean Code</h3>
+      <p>Readable, maintainable, and scalable code following industry best practices.</p>
+    </div>
+    <div class="feature-card">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" stroke-linejoin="arcs"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+      <h3>Responsive</h3>
+      <p>Mobile-first layouts designed to look stunning on every screen size.</p>
+    </div>
+    <div class="feature-card">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" stroke-linejoin="arcs"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path><line x1="16" y1="8" x2="2" y2="22"></line><line x1="17.5" y1="15" x2="9" y2="15"></line></svg>
+      <h3>Logic</h3>
+      <p>Strong problem-solving foundation with 30+ HackerRank challenges solved.</p>
+    </div>
+    <div class="feature-card">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" stroke-linejoin="arcs"><path d="M12 2a10 10 0 1 0 10 10H12V2z"></path><path d="M12 2a10 10 0 0 1 10 10h-2a8 8 0 0 0-8-8V2z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+      <h3>AI/ML</h3>
+      <p>Focusing on GenAI and data-driven applications for modern tech stacks.</p>
+    </div>
+  </section>
 
-  <footer>
-    <p>&copy; 2025 Neeraj Saini. All Rights Reserved.</p>
-  </footer>
+  <section id="about" class="section-block">
+    <div class="about-container">
+      <div class="about-text-content">
+        <h2>About Me</h2>
+        <p>I'm a Frontend and AI/ML Developer, focused on building clean, scalable, and user-centric web and GenAI applications. I enjoy solving real-world problems through logic and creative design.</p>
+      </div>
+      <div class="about-stats">
+        <div class="stat-box">
+          <span class="stat-number">8+</span>
+          <p>Projects Built</p>
+        </div>
+        <div class="stat-box" style="background: var(--accent-orange);">
+          <span class="stat-number">30+</span>
+          <p>Logic Solved</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <section id="skills" class="section-block">
+    <h2>Technical Mastery</h2>
+    <div class="skills-grid">
+      <div class="skill-category">
+        <h3>Frontend</h3>
+        <div class="skill-list">
+          <span class="skill-item">HTML5</span>
+          <span class="skill-item">CSS3</span>
+          <span class="skill-item">JavaScript</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h3>Core & Data</h3>
+        <div class="skill-list">
+          <span class="skill-item">Python</span>
+          <span class="skill-item">C Programming</span>
+          <span class="skill-item">Git & GitHub</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h3>Intelligence</h3>
+        <div class="skill-list">
+          <span class="skill-item">AI Basics</span>
+          <span class="skill-item">ML Knowledge</span>
+          <span class="skill-item">GenAI</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2 class="project-heading">Featured Work</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>Personal portfolio with clean UI and responsive layout.</p>
+        <a href="https://github.com/62fpsgaming-hue/portfolio-1.git" class="btn-link">View Project</a>
+      </div>
+      <div class="project-card">
+        <h3>Netflix Clone</h3>
+        <p>A pixel-perfect recreation using HTML5 and CSS.</p>
+        <a href="https://github.com/62fpsgaming-hue/netflix-clone" class="btn-link">GitHub</a>
+      </div>
+      <div class="project-card">
+        <h3>Solar System</h3>
+        <p>Working planetary model built with CSS animations.</p>
+        <a href="https://solar-system-hazel-rho.vercel.app/" class="btn-link">Live Demo</a>
+      </div>
+      <div class="project-card">
+        <h3>Starbucks Clone</h3>
+        <p>Fully responsive landing page with custom design.</p>
+        <a href="https://starbuck-clone-nu.vercel.app/" class="btn-link">Live Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section-block contact-section">
+    <h2>Start a Project</h2>
+    <p>Have a project in mind or want to collaborate on AI/Web applications?</p>
+    <a href="https://www.linkedin.com/in/neeraj-saini-464318232/" class="btn btn-work">Send a Message</a>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-brand">
+    <h2>Neeraj Saini.</h2>
+    <p>Building the future with code and intelligence.</p>
+  </div>
+  <div class="footer-links">
+    <h4>Navigation</h4>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+    </ul>
+  </div>
+  <div class="footer-links">
+    <h4>Connect</h4>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/neeraj-saini-464318232/" class="social-circle">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+      </a>
+      <a href="https://github.com/62fpsgaming-hue" class="social-circle">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+      </a>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
+
 
